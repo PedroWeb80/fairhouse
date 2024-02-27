@@ -1,0 +1,7 @@
+<label for="search">Search location housing</label>
+<input type="text" #search id="search">
+<button (click)="getLocationList(search.value)">search</button>
+<article *ngFor="let location of results">
+    <p>{{ location.name }}</p>
+    <button (click)="selectedHouseLocation(location)">Ver mais</button>
+</article>
