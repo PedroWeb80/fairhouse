@@ -1,0 +1,10 @@
+
+main {
+    max-width: 1224px;
+    margin: auto;
+    background-color: #fff;
+}
+header {
+    display: flex;
+    align-items: center;
+}

@@ -1,7 +1,11 @@
-<label for="search">Search location housing</label>
-<input type="text" #search id="search">
-<button (click)="getLocationList(search.value)">search</button>
-<article *ngFor="let location of results">
-    <p>{{ location.name }}</p>
-    <button (click)="selectedHouseLocation(location)">Ver mais</button>
-</article>
+<div class="container__search">
+    <input class="input__search" type="text" #search id="search" placeholder="search location here....">
+    <button class="button__search" (click)="getLocationList(search.value)">search</button>
+</div>
+
+<section>
+    <article *ngFor="let location of results">
+        <app-housing-mini-card [location]="location"></app-housing-mini-card>
+        <button (click)="selectedHouseLocation(location)">Ver mais</button>
+    </article>
+</section>

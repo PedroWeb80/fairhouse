@@ -1,12 +1,15 @@
 <header>
-  <h1>fairhouse</h1>
+  <img src="../assets/icon-house.png" alt="" height="30px" width="30px"><h1>Fairhouse</h1>
 </header>
-<section>
-  <app-housing-list [locationList]="housingList" (selectedLocationEvent)="updateSelectedLocation($event)"></app-housing-list>
-</section>
-<article>
-  <ng-container *ngIf="selectedLocation">
-    <app-housing-card [location]="selectedLocation"></app-housing-card>
-  </ng-container>
-</article>
+<main>
+  <section>
+    <app-housing-list [locationList]="housingList" (selectedLocationEvent)="updateSelectedLocation($event)"></app-housing-list>
+  </section>
+  <article>
+    <ng-container *ngIf="selectedLocation">
+      <app-housing-card [location]="selectedLocation"></app-housing-card>
+    </ng-container>
+  </article>
+</main>
+
 <router-outlet />

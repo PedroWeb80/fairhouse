@@ -1,16 +1,18 @@
 .container__card {
     display: flex;
     flex-direction: column;
-    
+    margin: auto;
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     box-shadow: 0.3rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
     margin-top: 15px;
     max-width: 350px;
+    overflow: hidden;
 }
 .photo__card{
     max-width: 350px;
     min-width: 300px;
+    overflow: hidden;
 }
 .photo__card > img {
     width: 100%;
@@ -36,14 +38,19 @@
     color: #555;
     
 }
-.details__card > ul > li > span {
-    background-color: rgba(0, 100, 0, 0.8);
+.label {
+    /* background-color: rgba(0, 100, 0, 0.8); */
     padding: 3px;
     font-weight: bolder;
-    color: #fff;
+    color: #555;
     margin-left: 3px;
     margin-bottom: 5px;
-    border-radius: 0.5rem;
+}
+
+.bag {
+    color: #fff;
+    border-radius: 0.2rem;
+    padding: 3px;
 }
 .danger {
     background-color: red;

@@ -1,0 +1,21 @@
+.container__mini-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    color: #555;
+    min-height: 200px;
+    
+}
+.photo__mini-card {
+    width: 200px;
+    min-width: 200px;
+}
+
+.photo__mini-card > img {
+    width: 100%;
+}
+.title__mini-card {
+    text-transform: uppercase;
+    font-size: 10px;
+}
