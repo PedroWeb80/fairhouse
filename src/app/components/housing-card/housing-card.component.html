@@ -1,0 +1,26 @@
+<div class="container__card">
+    <div class="photo__card">
+        <img src="{{ location?.photo }}" alt="">
+    </div>
+    <div class="title__card">
+        <h2>{{ location?.name }}</h2>
+    </div>
+    <div class="details__card">
+        <ul>
+            <li><span>Cidade:</span> {{ location?.city }}</li>
+            <li><span>Estado:</span>{{ location?.state }}</li>
+            <li>
+                <span>Wifi:</span> 
+                <span [ngStyle]="{'background-color':location?.wifi?'green':'red'}">
+                    {{ location?.wifi?"Sim":"Não" }}
+                </span>
+            </li>
+            <li>
+                <span >Lavanderia:</span>
+                <span [ngStyle]="{'background-color':location?.laundry?'green':'red'}">
+                    {{ location?.laundry?"Sim":"Não" }}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+

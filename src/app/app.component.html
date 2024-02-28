@@ -6,11 +6,7 @@
 </section>
 <article>
   <ng-container *ngIf="selectedLocation">
-    <p>{{selectedLocation.name}}</p>
-    <p>{{selectedLocation.city}}</p>
-    <p>{{selectedLocation.state}}</p>
-    <p >{{selectedLocation.wifi?'tem wifi':'não tem wifi'}}</p>
-    <p >{{selectedLocation.laundry?'tem lavandeiria':'não tem lavandeiria'}}</p>
+    <app-housing-card [location]="selectedLocation"></app-housing-card>
   </ng-container>
 </article>
 <router-outlet />
