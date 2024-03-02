@@ -1,10 +1,10 @@
 <div class="container__search">
-    <input class="input__search" type="text" #search id="search" placeholder="search location here....">
+    <input (keydown)="getLocationList(search.value)" class="input__search" type="text" #search id="search" placeholder="search location here....">
     <button class="button__search" (click)="getLocationList(search.value)">search</button>
 </div>
 
 <section>
-    <article *ngFor="let location of results">
+    <article *ngFor="let location of locationList">
         <app-housing-mini-card [location]="location"></app-housing-mini-card>
         <button (click)="selectedHouseLocation(location)">Ver mais</button>
     </article>

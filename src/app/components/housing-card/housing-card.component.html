@@ -1,27 +1,29 @@
-<div class="container__card">
-    <div class="photo__card">
-        <img src="{{ location?.photo }}" alt="">
-    </div>
-    <div class="title__card">
-        <h2>{{ location?.name }}</h2>
-    </div>
-    <div class="details__card">
-        <ul>
-            <li><span class="label">Cidade:</span> {{ location?.city }}</li>
-            <li><span class="label">Estado:</span>{{ location?.state }}</li>
-            <li><span class="label">Cômodos:</span>{{ location?.avaliableUnits }}</li>
-            <li>
-                <span class="label">Wifi:</span> 
-                <span class="bag" [ngStyle]="{'background-color':location?.wifi?'#66de80':'#db6b75'}">
-                    {{ location?.wifi?"Sim":"Não" }}
-                </span>
-            </li>
-            <li>
-                <span class="label">Lavanderia:</span>
-                <span class="bag" [ngStyle]="{'background-color':location?.laundry?'#66de80':'#db6b75'}">
-                    {{ location?.laundry?"Sim":"Não" }}</span>
-            </li>
-        </ul>
-    </div>
-</div>
+<a [routerLink]="['/details', location?.id]">
+    <div class="container__card">
+        <div class="photo__card">
+            <img src="{{ location?.photo }}" alt="">
+        </div>
+        <div class="title__card">
+            <h2>{{ location?.name }}</h2>
+        </div>
+        <div class="details__card">
+            <ul>
+                <li><span class="label">Cidade:</span> {{ location?.city }}</li>
+                <li><span class="label">Estado:</span>{{ location?.state }}</li>
+                <li><span class="label">Cômodos:</span>{{ location?.avaliableUnits }}</li>
+                <li>
+                    <span class="label">Wifi:</span>
+                    <span class="bag" [ngStyle]="{'background-color':location?.wifi?'#66de80':'#db6b75'}">
+                        {{ location?.wifi?"Sim":"Não" }}
+                    </span>
+                </li>
+                <li>
+                    <span class="label">Lavanderia:</span>
+                    <span class="bag" [ngStyle]="{'background-color':location?.laundry?'#66de80':'#db6b75'}">
+                        {{ location?.laundry?"Sim":"Não" }}</span>
+                </li>
+            </ul>
 
+        </div>
+    </div>
+</a>

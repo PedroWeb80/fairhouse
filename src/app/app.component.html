@@ -1,15 +1,12 @@
-<header>
-  <img src="../assets/icon-house.png" alt="" height="30px" width="30px"><h1>Fairhouse</h1>
+<header >
+  <a [routerLink]="['']" routerLinkActive="router-link-active">
+    <img [src]="environment.baseUrl+'/assets/icon-house.png'" alt="" height="30px" width="30px">
+    <h1>{{ title }}</h1>
+  </a>
+  
 </header>
 <main>
-  <section>
-    <app-housing-list [locationList]="housingList" (selectedLocationEvent)="updateSelectedLocation($event)"></app-housing-list>
-  </section>
-  <article>
-    <ng-container *ngIf="selectedLocation">
-      <app-housing-card [location]="selectedLocation"></app-housing-card>
-    </ng-container>
-  </article>
+  <router-outlet />  
 </main>
 
-<router-outlet />
+

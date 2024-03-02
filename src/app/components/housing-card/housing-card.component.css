@@ -10,12 +10,14 @@
     overflow: hidden;
 }
 .photo__card{
-    max-width: 350px;
-    min-width: 300px;
+    width: 350px;
     overflow: hidden;
 }
 .photo__card > img {
-    width: 100%;
+    max-width: 350px;
+    min-width: 350px;
+    max-height: 200px;
+    object-fit: fill;
 }
 .title__card {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

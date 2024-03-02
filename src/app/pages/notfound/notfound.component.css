@@ -1,0 +1,19 @@
+h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    color: #555;
+}
+div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #777;
+    padding: 5px;
+    border-radius: 0.5rem;
+    margin-top: 25px;
+    margin: auto;
+    width: 150px;
+}
+div:hover {
+    background-color: aliceblue;
+}

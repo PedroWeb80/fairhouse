@@ -1,0 +1,83 @@
+.container__card {
+  display: flex;
+  width: 100%;
+}
+.title__card > h2 {
+  font-size: 35px;
+  margin-bottom: 0;
+  color: #333;
+  text-transform: uppercase;
+}
+.title__card > div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+.title__card > div > img {
+  width: 30px;
+  height: 30px;
+}
+.title__card > div > p {
+  font-size: larger;
+  text-transform: capitalize;
+  color: #555;
+}
+.details__card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.details__card > ul {
+  list-style: none;
+  padding-left: 0;
+}
+.photo__card {
+  max-width: 600px;
+  overflow: hidden;
+
+}
+.photo__card > img {
+  min-width: 600px;
+  max-height: 400px;
+  height: auto;
+  overflow: hidden;
+  object-fit: fill;
+  border-radius: 0.8rem;
+}
+
+.listing-apply {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-top: 10px;
+}
+.listing-apply > form {
+  display: flex;
+  flex-direction: column;
+}
+.section-heading {
+  color: #7387e2;
+  margin-bottom: 8px;
+}
+.listing-apply > form > input {
+  border: 0;
+  border-bottom: 1px solid #7387e2;
+  margin-bottom: 5px;
+}
+.listing-apply > form > input:focus {
+  outline: none;
+  background-color: aliceblue;
+}
+.listing-apply > form > button {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 7px;
+  background-color: #7387e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.listing-apply > form > button:hover {
+  background-color: #5c6cb1;
+}

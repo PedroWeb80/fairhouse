@@ -1,0 +1,45 @@
+<article>
+    <section class="container__card" *ngIf="location else messageError">
+        <div class="details__card">
+            <div class="title__card">
+                <h2>{{ location.name }}</h2>
+                <div>
+                    <img src="{{ environment.baseUrl}}/assets/location.png" alt="">
+                    <p>{{ location.city }}, {{location.state}}</p>
+                </div>
+            </div>
+            <ul>
+                <li><span class="label">Cômodos disponivels: </span>{{ location.avaliableUnits }}</li>
+                <li>
+                    <span class="label">Casa tem wifi disponivel: </span> {{ location.wifi?"Sim":"Não" }}
+                </li>
+                <li>
+                    <span class="label">Casa possui lavanderia: </span> {{ location.laundry?"Sim":"Não" }}
+                </li>
+            </ul>
+            <section class="listing-apply">
+                <h2 class="section-heading">Apply now to live here</h2>
+                <form [formGroup]="applyForm" (submit)="submitApplication()">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" formControlName="firstName">
+        
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" formControlName="lastName">
+        
+                    <label for="email">Email</label>
+                    <input id="email" type="email" formControlName="email">
+                    <button type="submit" class="primary">Apply now</button>
+                </form>
+            </section>
+        </div>
+        
+        <div class="photo__card">
+            <img src="{{ location.photo }}" alt="">
+        </div>
+    </section>
+   
+</article>
+
+<ng-template #messageError>
+    <h3>Esta casa não está disponível</h3>
+</ng-template>

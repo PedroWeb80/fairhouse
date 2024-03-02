@@ -1,0 +1,9 @@
+<section>
+    <app-housing-list [locationList]="housingLocationList"
+        (selectedLocationEvent)="updateSelectedLocation($event)"></app-housing-list>
+</section>
+<article>
+    <ng-container *ngIf="selectedLocation">
+        <app-housing-card [location]="selectedLocation"></app-housing-card>
+    </ng-container>
+</article>

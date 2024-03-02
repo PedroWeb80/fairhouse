@@ -22,6 +22,8 @@
 section {
     display: flex;
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 article {
     margin-left: 10px;
